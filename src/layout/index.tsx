@@ -9,7 +9,6 @@ import { ThemeToggleButton } from "@/components/theme/theme-toggle-button";
 import { Pending } from "@/components/toolkit";
 import { AnimatedSegmentedTabs } from "@/components/ui/animated-segmented-tabs";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import { UnderlineHover } from "@/components/underline-hover";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useTheme } from "@/hooks/use-theme";
 import { t } from "@/i18n";
@@ -152,45 +151,6 @@ export function AppLayout() {
             </main>
           </Tabs.Content>
         </AnimatedSegmentedTabs>
-        <footer className="app-footer">
-          © {new Date().getFullYear()} IP ·{" "}
-          <UnderlineHover asChild>
-            <a
-              href="https://huzhihui.com/blog/one-ip-guide"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t("使用文档")}
-            </a>
-          </UnderlineHover>{" "}
-          ·{" "}
-          <UnderlineHover asChild>
-            <Link to="/docs/api">API</Link>
-          </UnderlineHover>{" "}
-          ·{" "}
-          <UnderlineHover asChild>
-            <Link to="/terms">{t("使用条款")}</Link>
-          </UnderlineHover>{" "}
-          ·{" "}
-          <UnderlineHover asChild>
-            <Link to="/privacy">{t("隐私政策")}</Link>
-          </UnderlineHover>{" "}
-          ·{" "}
-          <UnderlineHover asChild>
-            <a
-              href="https://github.com/zhihui-hu/one-ip"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 align-middle"
-            >
-              GitHub
-            </a>
-          </UnderlineHover>{" "}
-          ·{" "}
-          <UnderlineHover asChild>
-            <a href="mailto:ip@huzhihui.com">{t("联系作者")}</a>
-          </UnderlineHover>
-        </footer>
       </div>
       <aside aria-label={t("站点通知")} className="update-notices">
         <AppUpdateChecker />
